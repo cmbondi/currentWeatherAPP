@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for <%= place %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="main_container">
+        <div class="container">
+            <h1 class="heading">Current Weather for <%= zipCode %> | <%= place %></h1>
+        </div>
+        <div class="container top_item">
+                <p class="item">Currently<br><%= currentTemp %></p>
+                <p class="item"><img src="<%= weatherConditionIMG %>" alt="Conditions" width="60%"><br><%= weatherDesc %></p>
+                <p class="item">Feels Like<br><%= feelsLike %></p>
+        </div>
+        <div class="container top_item">
+                <p class="item">High: <%= highTemp %></p>
+                <p class="item">Low: <%= lowTemp %></p>
+        </div>
+        <div class="container">
+                <p class="item">Wind <%= dir %> @ <%= speed %> MPH - Gusting to <%= gust %> MPH</p>
+        </div>
+        <div class="container">
+                <p class="item">Pressure is <%= baroPressure %> inches | Humidity is <%= relHumidity %>%</p>
+        </div>
+    </div>
+</body>
+</html>

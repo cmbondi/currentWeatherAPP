@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Weather APP</title>
+</head>
+<body>
+    <div id="index_container">
+        <h1>Current Weather Information by ZipCode</h1>
+        <form action="/" method="POST">
+            <label for="zipCode">Enter your zipcode: </label>
+            <input class="index_item" type="text" id="zipCode" name="citybyzip"><br>
+            <label for="units">Which Unit for Temp?</label>
+            <select class="index_item" name="tempUnits" id="units">
+                <option value="imperial">Imperial</option>
+                <option value="metric">Metric</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <br>
+            <button class="button" type="submit">Go</button>
+        </form>
+    </div>
+</body>
+</html>
